@@ -4,20 +4,20 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <form className="form" onSubmit={this.handleSubmit}>
+          <div className="input-group">
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" placeholder="nome@email.com.br" />
+          </div>
+          <div className="input-group">
+            <label htmlFor="password">Senha</label>
+            <input type="password" name="password" />
+          </div>
+          <button className="primary">ENTRAR</button>
+        </form>
+        <button className="secondary" onClick={this.handleClick}>
+          Criar uma nova conta
+        </button>
     </div>
   );
 }
